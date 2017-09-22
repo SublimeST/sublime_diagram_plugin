@@ -103,7 +103,7 @@ class PlantUMLDiagram(BaseDiagram):
         if puml.returncode != 0:
             print("Error Processing Diagram, returncode=%s:" % (puml.returncode))
             print(self.text)
-            return
+            return self.file
         else:
             return self.file
 
