@@ -43,6 +43,7 @@ def setup():
             proc.CHECK_ON_STARTUP = sublime_settings.get('check_on_startup', True)
             proc.NEW_FILE = sublime_settings.get('new_file', True)
             proc.OUTPUT_FORMAT = sublime_settings.get('output_format', 'png')
+            proc.OUTPUT_SUFFIX = sublime_settings.get('output_suffix', '')
             proc.load()
             ACTIVE_PROCESSORS.append(proc)
             print("Loaded processor: %r" % proc)

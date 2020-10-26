@@ -50,7 +50,7 @@ class PlantUMLDiagram(BaseDiagram):
             if self.proc.NEW_FILE:
                 self.file = NamedTemporaryFile(prefix=sourceFile, suffix=self.output_file_extension, delete=False)
             else:
-                sourceFile = splitext(sourceFile)[0] + '_' + str(sequence) + self.output_file_extension
+                sourceFile = splitext(sourceFile)[0] + '_' + str(sequence) + self.proc.OUTPUT_SUFFIX + self.output_file_extension
                 self.file = open(sourceFile, 'w')
 
     def generate(self):
