@@ -4,6 +4,6 @@
 	"check_on_startup": true,
 	"new_file": false, // generate new file each time
 	"output_format": "png", // valid values: png, svg, txt, utxt, latex
-  "output_suffix": "", // suffix to be added to the output name.
+	"output_suffix": "", // suffix to be added to the output name.
 	"charset": null // Can be "UTF-8" - to support non-latin text in diagram
 }
