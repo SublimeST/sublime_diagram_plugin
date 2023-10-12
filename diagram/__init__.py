@@ -1,6 +1,6 @@
 ﻿from __future__ import absolute_import
 from .plantuml import PlantUMLProcessor
-from .sublime3 import Sublime3Viewer
+from .sublime3 import Sublime3Viewer, NoneViewer
 from .quicklook import QuickLookViewer
 from .preview import PreviewViewer
 from .eog import EyeOfGnomeViewer
@@ -20,6 +20,7 @@ AVAILABLE_VIEWERS = [
     PreviewViewer,
     FreedesktopDefaultViewer,
     WindowsDefaultViewer,
+    NoneViewer
 ]
 ACTIVE_PROCESSORS = []
 ACTIVE_VIEWER = None

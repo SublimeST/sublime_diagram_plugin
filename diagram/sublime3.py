@@ -4,8 +4,6 @@ import re
 
 class Sublime3Viewer(BaseViewer):
 	def load(self):
-		if not sublime.version().startswith('3'):
-			raise Exception("Not Sublime 3!")
 		version_match = re.match(r"\d+", sublime.version())
 
 		if not version_match:
@@ -20,3 +18,11 @@ class Sublime3Viewer(BaseViewer):
 		for diagram_file in diagram_files:
 			if diagram_file:
 				sublime.active_window().open_file(diagram_file.name)
+
+
+class NoneViewer(BaseViewer):
+	def load(self):
+		pass
+
+	def view(self, filenames):
+		pass
